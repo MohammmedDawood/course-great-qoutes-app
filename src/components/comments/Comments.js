@@ -10,12 +10,7 @@ import NewCommentForm from "./NewCommentForm";
 
 const Comments = () => {
   const params = useParams();
-  const {
-    sendRequest,
-    status,
-    data: loadedComments,
-    error,
-  } = useHttp(getAllComments);
+  const { sendRequest, status, data: loadedComments } = useHttp(getAllComments);
 
   useEffect(() => {
     sendRequest(params.quoteId);
