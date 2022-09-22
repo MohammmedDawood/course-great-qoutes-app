@@ -1,8 +1,21 @@
+import { Route, Switch } from "react-router-dom";
+import AllQoutes from "./pages/AllQoutes";
+import NewQoute from "./pages/NewQoute";
+import QouteDetail from "./pages/QouteDetail";
+
 function App() {
   return (
-    <div>
-
-    </div>
+    <Switch>
+      <Route path="/qoutes" exact>
+        <AllQoutes />
+      </Route>
+      <Route path="/qoutes/:qouteId">
+        <QouteDetail />
+      </Route>
+      <Route path="/new-qoute">
+        <NewQoute />
+      </Route>
+    </Switch>
   );
 }
 
