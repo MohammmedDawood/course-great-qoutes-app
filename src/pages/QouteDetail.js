@@ -8,7 +8,7 @@ function QouteDetail() {
     <>
       <h1>QouteDetail</h1>
       <p>{params.qouteId}</p>
-      <Route path="/qoutes/:qouteId/comments">
+      <Route path={`/qoutes/${params.qouteId}/comments`}>
         <Comments />
       </Route>
     </>
